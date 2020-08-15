@@ -11,7 +11,6 @@ struct heapNode
     heapNode(char l, int f){letter=l; frequency=f;};
 };
 // size of heap should be 2*numCharacters-1 + 1 for the first blank element
-// try to change it to be a heap of ptrs
 // contains the original array of characters and frequencies
 // create an array of strings of size 256, the ascii value element will have the code and the others will be empty 
 class minHeap
@@ -29,7 +28,6 @@ class minHeap
         heapNode* remove();
 };
 
-//or maybe create a copy of the nodes for the tree and dont have them in the heap and then just use tree and heap isnt needed
 
 class huffman
 {
@@ -203,7 +201,7 @@ huffman::huffman(string given)
 
 // pass root
 // also assigns the codes to the vars
-// O(n)?
+// O(n)
 void huffman::assignCodes(heapNode* cu)
 {
     if(cu)
